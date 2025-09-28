@@ -1,0 +1,5 @@
+{
+  "name": "Phoenix ULS Portal Clone",
+  "description": "A visually identical replica of a university service portal, created using React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
