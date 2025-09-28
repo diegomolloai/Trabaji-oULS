@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import type { Alumnus } from '../types';
-import { generateAlumni } from '../utils/dataGenerator';
+import type { Alumnus } from '../types.ts';
+import { generateAlumni } from '../utils/dataGenerator.ts';
 
 interface EgresadosPageProps {
   onBack: () => void;

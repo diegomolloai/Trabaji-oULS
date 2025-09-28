@@ -1,4 +1,4 @@
-import type { Alumnus, Professor } from '../types';
+import type { Alumnus, Professor } from '../types.ts';
 
 const firstNames = ["Juan", "María", "José", "Ana", "Carlos", "Laura", "Pedro", "Sofía", "Luis", "Elena", "Miguel", "Lucía", "Javier", "Carmen", "David", "Isabel", "Daniel", "Paula", "Manuel", "Sara"];
 const lastNames = ["García", "Rodríguez", "González", "Fernández", "López", "Martínez", "Sánchez", "Pérez", "Gómez", "Martín", "Jiménez", "Ruiz", "Díaz", "Moreno", "Muñoz", "Álvarez", "Romero", "Alonso", "Gutiérrez", "Nava"];

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Service } from './types';
+import type { Service } from './types.ts';
 
 // Generic placeholder icons
 const IconPlaceholder = ({ className, children }: { className?: string; children?: React.ReactNode }) => (

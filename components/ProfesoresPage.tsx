@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import type { Professor } from '../types';
-import { generateProfessors } from '../utils/dataGenerator';
+import type { Professor } from '../types.ts';
+import { generateProfessors } from '../utils/dataGenerator.ts';
 
 interface ProfesoresPageProps {
   onBack: () => void;

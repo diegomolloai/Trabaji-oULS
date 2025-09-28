@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PlaceholderLogo } from '../constants';
+import { PlaceholderLogo } from '../constants.tsx';
 
 interface LoginPageProps {
   onLogin: () => void;

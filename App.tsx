@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { services, PlaceholderLogo, SettingsIcon } from './constants';
-import ServiceCard from './components/ServiceCard';
-import EgresadosPage from './components/EgresadosPage';
-import ProfesoresPage from './components/ProfesoresPage';
-import LoginPage from './components/LoginPage';
+import { services, PlaceholderLogo, SettingsIcon } from './constants.tsx';
+import ServiceCard from './components/ServiceCard.tsx';
+import EgresadosPage from './components/EgresadosPage.tsx';
+import ProfesoresPage from './components/ProfesoresPage.tsx';
+import LoginPage from './components/LoginPage.tsx';
 
 type Page = 'menu' | 'Egresados' | 'Profesores' | 'Consultas' | 'Informes';
 
