@@ -1,12 +1,6 @@
 import React from 'react';
-import type { Service } from '../types.ts';
 
-interface ServiceCardProps {
-  service: Service;
-  onClick?: () => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick }) => {
+const ServiceCard = ({ service, onClick }) => {
   const cardClasses = `
     flex flex-col items-center justify-center text-center
     p-6 md:p-8 rounded-xl
@@ -19,30 +13,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick }) => {
     }
   `;
 
-  const content = (
-    <>
-      <div className="mb-4 flex items-center justify-center flex-shrink-0">
-        {service.icon}
-      </div>
-      <span className="text-lg md:text-xl text-gray-800 font-bold leading-tight">
-        {service.name}
-      </span>
-    </>
+  const content = React.createElement(React.Fragment, null,
+    React.createElement('div', { className: "mb-4 flex items-center justify-center flex-shrink-0" },
+      service.icon
+    ),
+    React.createElement('span', { className: "text-lg md:text-xl text-gray-800 font-bold leading-tight" },
+      service.name
+    )
   );
 
   if (onClick) {
-    return (
-      <button onClick={onClick} className={cardClasses}>
-        {content}
-      </button>
-    );
+    return React.createElement('button', { onClick: onClick, className: cardClasses }, content);
   }
 
-  return (
-    <a href={service.link || '#'} className={cardClasses}>
-      {content}
-    </a>
-  );
+  return React.createElement('a', { href: service.link || '#', className: cardClasses }, content);
 };
 
 export default ServiceCard;

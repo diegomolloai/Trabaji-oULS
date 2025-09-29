@@ -1,5 +1,3 @@
-import type { Alumnus, Professor } from '../types.ts';
-
 const firstNames = ["Juan", "María", "José", "Ana", "Carlos", "Laura", "Pedro", "Sofía", "Luis", "Elena", "Miguel", "Lucía", "Javier", "Carmen", "David", "Isabel", "Daniel", "Paula", "Manuel", "Sara"];
 const lastNames = ["García", "Rodríguez", "González", "Fernández", "López", "Martínez", "Sánchez", "Pérez", "Gómez", "Martín", "Jiménez", "Ruiz", "Díaz", "Moreno", "Muñoz", "Álvarez", "Romero", "Alonso", "Gutiérrez", "Nava"];
 const careers = ["Ingeniería de Software", "Diseño Gráfico", "Administración de Empresas", "Psicología", "Derecho", "Medicina", "Arquitectura"];
@@ -31,13 +29,13 @@ const bios = [
 ];
 
 
-const getRandomItem = <T>(arr: T[]): T => arr[Math.floor(Math.random() * arr.length)];
-const generateCompoundName = (arr: string[]): string => `${getRandomItem(arr)} ${getRandomItem(arr)}`;
-const getRandomNumber = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const generateCompoundName = (arr) => `${getRandomItem(arr)} ${getRandomItem(arr)}`;
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 
-export const generateAlumni = (count: number): Alumnus[] => {
-    const alumni: Alumnus[] = [];
+export const generateAlumni = (count) => {
+    const alumni = [];
     for (let i = 1; i <= count; i++) {
         alumni.push({
             id: i,
@@ -52,22 +50,22 @@ export const generateAlumni = (count: number): Alumnus[] => {
     return alumni;
 };
 
-export const generateProfessors = (count: number): Professor[] => {
-    const professors: Professor[] = [];
+export const generateProfessors = (count) => {
+    const professors = [];
     for (let i = 1; i <= count; i++) {
         const profFirstNames = generateCompoundName(firstNames);
         const profLastNames = generateCompoundName(lastNames);
 
         // Generate projects (2 to 5)
         const numProjects = getRandomNumber(2, 5);
-        const projects: string[] = [];
+        const projects = [];
         for (let p = 0; p < numProjects; p++) {
             projects.push(getRandomItem(projectTitles));
         }
 
         // Generate assistants (2 to 3)
         const numAssistants = getRandomNumber(2, 3);
-        const assistants: string[] = [];
+        const assistants = [];
         for (let a = 0; a < numAssistants; a++) {
             assistants.push(`${getRandomItem(firstNames)} ${getRandomItem(lastNames)}`);
         }
