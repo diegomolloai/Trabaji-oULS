@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .debug { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>404 - Debug Information</h1>
+    <div class="debug">
+        <h3>Current URL:</h3>
+        <p id="currentUrl"></p>
+        <h3>Expected files:</h3>
+        <ul>
+            <li><a href="/Trabaji-oULS/">Index (should work)</a></li>
+            <li><a href="/Trabaji-oULS/assets/">Assets folder</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('currentUrl').textContent = window.location.href;
+    </script>
+</body>
+</html>
